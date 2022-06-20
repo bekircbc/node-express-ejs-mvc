@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
-// app.get('/', (req, res) => {
-//     res.send(siteView(siteData));
+// app.get("/", (req, res) => {
+//   res.send(siteView(siteData));
 // });
 
 app.listen(port, () => {
