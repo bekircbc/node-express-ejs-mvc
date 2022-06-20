@@ -1,6 +1,6 @@
 import express from "express";
 import { siteData } from "./src/models.js";
-import { siteView } from "./src/views.js";
+// import { siteView } from "./src/views.js";
 import path from "path";
 
 const __dirname = path.resolve(path.dirname(""));
@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./public/views"));
 
 app.get("/", (req, res) => {
-  res.render("pages/index");
+  res.render("pages/index", siteData);
 });
 
 // app.get("/", (req, res) => {
