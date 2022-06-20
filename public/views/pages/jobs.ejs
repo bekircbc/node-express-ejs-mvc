@@ -1,0 +1,10 @@
+<%- include('../partials/header');%>
+<h2>
+  <b>Local directory of markdown files: </b>There are <%=jobs.length%> jobs.
+</h2>
+<div class="content">
+  <% for(const job of jobs) { %>
+  <div class="job">ID-CODE: <%=job.idCode%> <%-job.html%></div>
+  <%}%>
+</div>
+<%- include('../partials/footer');%>
