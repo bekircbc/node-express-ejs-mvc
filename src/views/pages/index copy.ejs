@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Info Site</title>
+  </head>
+
+  <body>
+    <h1>Info Site</h1>
+
+    <h2><b>API call: </b>There are <%=nouns.length%> nouns.</h2>
+    <div class="content">
+      <ul>
+        <% for(const noun of nouns.slice(0,3)) { %>
+
+        <li><%=noun.article%><%=noun.singular%></li>
+        <% } %>
+        <li>...</li>
+      </ul>
+    </div>
+
+    <h2><b>Local JSON file: </b>There are <%=books.length%> books.</h2>
+    <div class="content">
+      <ul>
+        <% for(const book of books.slice(0,3)) { %>
+        <li><%=book.title%></li>
+        <%}%>
+        <li>...</li>
+      </ul>
+    </div>
+
+    <h2>
+      <b>Local Excel file: </b>There are <%=translations.length%> translations.
+    </h2>
+    <div class="content">
+      <ul>
+        <% for(const translation of translations.slice(0,3)) { %>
+        <li><%=translation.fromPhrase%></li>
+        <%}%>
+        <li>...</li>
+      </ul>
+    </div>
+
+    <h2>
+      <b>Local directory of images: </b>There are <%=landscapePhotos.length%>
+      landscape photos.
+    </h2>
+    <div class="content">
+      <% for(const fileName of landscapePhotos) { %>
+      <img src="images/<%=fileName%>" />
+      <%}%>
+    </div>
+
+    <h2>
+      <b>Local directory of markdown files: </b>There are <%=jobs.length%> jobs.
+    </h2>
+    <div class="content">
+      <% for(const job of jobs) { %>
+      <div class="job">ID-CODE: <%=job.idCode%> <%-job.html%></div>
+      <%}%>
+    </div>
+  </body>
+</html>
