@@ -1,0 +1,12 @@
+<%- include('../partials/header');%>
+<h2>
+  <b>Local directory of images: </b>There are <%=landscapePhotos.length%>
+  landscape photos.
+</h2>
+<div class="content">
+  <% for(const fileName of landscapePhotos) { %>
+  <img src="images/<%=fileName%>" />
+  <%}%>
+</div>
+
+<%- include('../partials/footer');%>
