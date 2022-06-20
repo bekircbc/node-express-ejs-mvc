@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <% const showActiveClass=(page)=> { if(page === currentPage) { return
+  'class=active'; } else { return ''; } } %>
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,11 +15,18 @@
   <body>
     <h1>Info Page</h1>
     <nav>
-      <a href="/">Welcome</a> | <a href="nouns">Nouns</a> |
-      <a href="books">Books</a> | <a href="translations">Translations</a> |
-      <a href="landscape-photos">Landscape Photos</a> |
-      <a href="jobs">Jobs</a>
+      <a href="/"
+			   <%=showActiveClass('welcome')%>>Welcome</a> |
+			<a href="/nouns"
+			   <%=showActiveClass('nouns')%>>Nouns</a> |
+			<a href="/books"
+			   <%=showActiveClass('books')%>>Books</a> |
+			<a href="/translations"
+			   <%=showActiveClass('translations')%>>Translations</a> |
+			<a href="/landscape-photos"
+			   <%=showActiveClass('landscape-photos')%>>Landscape Photos</a> |
+			<a href="/jobs"
+			   <%=showActiveClass('jobs')%>>Jobs</a>
     </nav>
     <hr />
-  </body>
-</html>
+  

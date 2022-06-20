@@ -37,9 +37,9 @@ a {
 
 nav a {
   text-decoration: none;
-  color: orange;
+  color: #aaa;
 }
 
-nav a:active {
-  color: red;
+nav a.active {
+  color: yellow;
 }
