@@ -39,3 +39,7 @@ nav a {
   text-decoration: none;
   color: orange;
 }
+
+nav a:active {
+  color: red;
+}
