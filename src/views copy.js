@@ -1,11 +1,11 @@
 export const siteView = ({
-    nouns,
-    books,
-    translations,
-    jobs,
-    landscapePhotos
+  nouns,
+  books,
+  translations,
+  jobs,
+  landscapePhotos,
 }) => {
-    return `
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,52 +21,52 @@ export const siteView = ({
     <h2><b>API call: </b>There are ${nouns.length} nouns.</h2>
     <div class="content">
         ${nouns
-            .filter((m, i) => i < 3)
-            .map((m) => m.article + ' ' + m.singular)
-            .join(', ')}, ...
+          .filter((m, i) => i < 3)
+          .map((m) => m.article + " " + m.singular)
+          .join(", ")}, ...
     </div>
 
     <h2><b>Local JSON file: </b>There are ${books.length} books.</h2>	
     <div class="content">
         ${books
-            .filter((m, i) => i < 3)
-            .map((m) => m.title)
-            .join(', ')}, ...
+          .filter((m, i) => i < 3)
+          .map((m) => m.title)
+          .join(", ")}, ...
     </div>
 
     <h2><b>Local Excel file: </b>There are ${
-        translations.length
+      translations.length
     } translations.</h2>	
     <div class="content">
         ${translations
-            .filter((m, i) => i < 3)
-            .map((m) => m.fromPhrase)
-            .join(', ')}, ...
+          .filter((m, i) => i < 3)
+          .map((m) => m.fromPhrase)
+          .join(", ")}, ...
     </div>
 
     <h2><b>Local directory of images: </b>There are ${
-        landscapePhotos.length
+      landscapePhotos.length
     } landscape photos.</h2>
     <div class="content">
         ${landscapePhotos
-            .map((fileName) => `<img src="images/${fileName}"/>`)
-            .join('')}
+          .map((fileName) => `<img src="images/${fileName}"/>`)
+          .join("")}
     </div>
 
     <h2><b>Local directory of markdown files: </b>There are ${
-        jobs.length
+      jobs.length
     } jobs.</h2>
     <div class="content">
         ${jobs
-            .map((job) => {
-                return `
+          .map((job) => {
+            return `
                 <div class="job">
                     ID-CODE: ${job.idCode}
                     ${job.html}
                 </div>
                 `;
-            })
-            .join('')}
+          })
+          .join("")}
     </div>
 
 </body>
