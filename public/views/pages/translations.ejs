@@ -1,0 +1,14 @@
+<%- include('../partials/header');%>
+<h2>
+  <b>Local Excel file: </b>There are <%=translations.length%> translations.
+</h2>
+<div class="content">
+  <ul>
+    <% for(const translation of translations) { %>
+    <li><%=translation.fromPhrase%></li>
+    <%}%>
+    <li>...</li>
+  </ul>
+</div>
+
+<%- include('../partials/footer');%>
