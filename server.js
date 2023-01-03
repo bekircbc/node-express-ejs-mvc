@@ -6,7 +6,7 @@ import path from "path";
 const __dirname = path.resolve(path.dirname(""));
 
 const app = express();
-const port = process.env.PORT || 3007;
+const port = process.env.PORT || 30107;
 
 let currentPage = "";
 
